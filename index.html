@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
     <title>Basketball Game</title>
 	<script type="text/javascript" src="js/phaser.min.js"></script>
-	<h2>Basketball Game (inspired by Facebook Messenger!)</h2>
+	<h2>Go Gaels!</h2>
     <style type="text/css">
         body {
             margin: 0;
@@ -107,7 +107,7 @@ function create() {
 	// high_score_text = game.add.text(450, 25, 'High Score\n' + high_score, { font: 'Arial', fontSize: '32px', fill: '#000', align: 'center' });
 	current_score_text = game.add.text(187, 312, '', { font: 'Arial', fontSize: '40px', fill: '#000', align: 'center' }); // 300, 500
 	current_best_text = game.add.text(143, 281, '', { font: 'Arial', fontSize: '20px', fill: '#000', align: 'center' });// 230, 450
-	current_best_score_text = game.add.text(187, 312, '', { font: 'Arial', fontSize: '40px', fill: '#00e6e6', align: 'center' }); // 300, 500
+	current_best_score_text = game.add.text(187, 312, '', { font: 'Arial', fontSize: '40px', fill: '#d80024', align: 'center' }); // 300, 500
 
 	hoop = game.add.sprite(88, 62, 'hoop'); // 141, 100
 	left_rim = game.add.sprite(150, 184, 'side rim'); // 241, 296
@@ -166,7 +166,7 @@ function update() {
 			current_best_text.text = 'Current Best';
 			current_best_score_text.text = high_score;
 		}
-		emoji = game.add.sprite(180, 100, emojiName);
+		emoji = game.add.sprite(180, 70, emojiName);
 		emoji.scale.setTo(0.25, 0.25);
 		moveInTween = game.add.tween(emoji).from( { y: 150 }, 500, Phaser.Easing.Elastic.Out, true);
 		fadeInTween = game.add.tween(emoji).from( { alpha: 0 }, 200, Phaser.Easing.Linear.None, true, 0, 0, false);
